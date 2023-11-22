@@ -1,0 +1,23 @@
+import sys
+
+print("Programa para convertir la temperatura o el tiempo")
+
+number = int(input("Poner 1 si desea convertir la temperatura \nPoner 2 si desea convertir el tiempo \nPoner 3 para salir del programa\n"))
+
+if number == 1:
+
+    degreesF = float(input('Enter the temperature in degrees F: '))
+    degreesC = 5/9*(degreesF - 32)
+    print(degreesF, 'degrees F =', degreesC, 'degrees C')
+
+elif number == 2:
+
+    seconds = int(input("Please enter the number of seconds:"))
+    hours = seconds // 3600 
+    seconds = seconds % 3600
+    minutes = seconds // 60 
+    seconds = seconds % 60
+    print(hours, "hr,", minutes, "min,", seconds, "sec")
+
+elif number == 3:
+    sys.exit()
